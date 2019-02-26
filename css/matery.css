@@ -358,7 +358,7 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    background: rgba(255, 87, 34, 0.75);
+    background: rgba(156, 39, 176, 0.75);
     /* -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite; */
 }
