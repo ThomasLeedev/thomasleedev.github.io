@@ -365,13 +365,10 @@ public enum SeasonEnum {
 正例：代码逻辑分清红花和绿叶，个性和共性，绿叶逻辑单独出来成为额外方法，使主干代码
 更加清晰；共性逻辑抽取成为共性方法，便于复用和维护。
 </code></pre><h5 id="OOP-规约"><a href="#OOP-规约" class="headerlink" title="OOP 规约"></a>OOP 规约</h5><pre><code>【强制】所有的覆写方法，必须加 @Override 注解。
-</code></pre><ul>
-<li>这里的可变参数需要了解一下。—————————————————–<pre><code>【强制】相同参数类型，相同业务含义，才可以使用 Java 的可变参数，避免使用 Object。
+</code></pre><pre><code>【强制】相同参数类型，相同业务含义，才可以使用 Java 的可变参数，避免使用 Object。
 说明：可变参数必须放置在参数列表的最后。（提倡同学们尽量不用可变参数编程）
 正例：public List&lt;User&gt; listUsers(String type, Long... ids) {...}
-</code></pre></li>
-</ul>
-<pre><code>【强制】外部正在调用或者二方库依赖的接口，不允许修改方法签名，避免对接口调用方产生
+</code></pre><pre><code>【强制】外部正在调用或者二方库依赖的接口，不允许修改方法签名，避免对接口调用方产生
 影响。接口过时必须加@Deprecated 注解，并清晰地说明采用的新接口或者新服务是什么。
 </code></pre><pre><code>【强制】Object 的 equals 方法容易抛空指针异常，应使用常量或确定有值的对象来调用
 equals。
@@ -389,13 +386,10 @@ NPE 问题，或者入库检查，都由使用者来保证。
 不成功时，返回的是默认值，页面显示为 0%，这是不合理的，应该显示成中划线。所以包装
 数据类型的 null 值，能够表示额外的信息，如：远程调用失败，异常退出。
 </code></pre><pre><code>【强制】定义 DO/DTO/VO 等 POJO 类时，不要设定任何属性默认值。
-</code></pre><ul>
-<li>了解———————————————————————————–<pre><code>【强制】序列化类新增属性时，请不要修改 serialVersionUID 字段，避免反序列失败；如
+</code></pre><pre><code>【强制】序列化类新增属性时，请不要修改 serialVersionUID 字段，避免反序列失败；如
 果完全不兼容升级，避免反序列化混乱，那么请修改 serialVersionUID 值。
 说明：注意 serialVersionUID 不一致会抛出序列化运行时异常。
-</code></pre></li>
-</ul>
-<pre><code>【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在 init 方法中。
+</code></pre><pre><code>【强制】构造方法里面禁止加入任何业务逻辑，如果有初始化逻辑，请放在 init 方法中。
 </code></pre><pre><code>【强制】POJO 类必须写 toString 方法。使用 IDE 中的工具：source&gt; generate toString
 时，如果继承了另一个 POJO 类，注意在前面加一下 super.toString。
 说明：在方法执行抛出异常时，可以直接调用 POJO 的 toString()方法打印其属性值，便于排
@@ -444,79 +438,159 @@ array = list.toArray(array);
  List list = Arrays.asList(str);
 第一种情况：list.add(&quot;yangguanbao&quot;); 运行时异常。
 第二种情况：str[0] = &quot;gujin&quot;; 那么 list.get(0)也会随之修改。
-</code></pre><ul>
-<li>了解———————————————————————————–<br><code>`</code><br>【强制】泛型通配符&lt;? extends T&gt;来接收返回的数据，此写法的泛型集合不能使用 add 方<br>法，而&lt;? super T&gt;不能使用 get 方法，作为接口调用赋值时易出错。</li>
-</ul>
-<p>说明：扩展说一下 PECS(Producer Extends Consumer Super)原则：第一、频繁往外读取内<br>容的，适合用&lt;? extends T&gt;。第二、经常往里插入的，适合用&lt;? super T&gt;。</p>
-<pre><code>
-</code></pre><p>【强制】不要在 foreach 循环里进行元素的 remove/add 操作。remove 元素请使用 Iterator<br>方式，如果并发操作，需要对 Iterator 对象加锁。</p>
-<p>正例：<br>List<string> list = new ArrayList&lt;&gt;();<br>list.add(“1”);<br>list.add(“2”);<br>Iterator<string> iterator = list.iterator();<br>while (iterator.hasNext()) {<br>String item = iterator.next();<br>if (删除元素的条件) {<br>iterator.remove();<br>}<br>}<br>反例：<br>for (String item : list) {<br>if (“1”.equals(item)) {<br>list.remove(item);<br>}<br>}<br>说明：以上代码的执行结果肯定会出乎大家的意料，那么试一下把“1”换成“2”，会是同样的结果吗？</string></string></p>
-<pre><code>
-</code></pre><p>【强制】在 JDK7 版本及以上，Comparator 实现类要满足如下三个条件，不然 Arrays.sort，<br>Collections.sort 会报 IllegalArgumentException 异常。</p>
-<p>说明：三个条件如下<br>1） x，y 的比较结果和 y，x 的比较结果相反。<br>2） x&gt;y，y&gt;z，则 x&gt;z。<br>3） x=y，则 x，z 比较结果和 y，z 比较结果相同。</p>
-<p>反例：下例中没有处理相等的情况，实际使用中可能会出现异常：<br>new Comparator<student>() {<br>@Override<br>public int compare(Student o1, Student o2) {<br>return o1.getId() &gt; o2.getId() ? 1 : -1;<br>}<br>};</student></p>
-<pre><code>
-</code></pre><p>【推荐】集合泛型定义时，在 JDK7 及以上，使用 diamond 语法或全省略。<br>说明：菱形泛型，即 diamond，直接使用&lt;&gt;来指代前边已经指定的类型。<br>正例：<br>// &lt;&gt; diamond 方式<br>HashMap&lt;String, String&gt; userCache = new HashMap&lt;&gt;(16);<br>// 全省略方式<br>ArrayList<user> users = new ArrayList(10); </user></p>
-<pre><code>
-- 了解-----------------------------------------------------------------------------------
-</code></pre><p>【推荐】集合初始化时，指定集合初始值大小。<br>说明：HashMap 使用 HashMap(int initialCapacity) 初始化。<br>正例：initialCapacity = (需要存储的元素个数 / 负载因子) + 1。注意负载因子（即 loader<br>factor）默认为 0.75，如果暂时无法确定初始值大小，请设置为 16（即默认值）。<br>反例：HashMap 需要放置 1024 个元素，由于没有设置容量初始大小，随着元素不断增加，容<br>量 7 次被迫扩大，resize 需要重建 hash 表，严重影响性能</p>
-<pre><code>
-</code></pre><p>【推荐】使用 entrySet 遍历 Map 类集合 KV，而不是 keySet 方式进行遍历。<br>说明：keySet 其实是遍历了 2 次，一次是转为 Iterator 对象，另一次是从 hashMap 中取出<br>key 所对应的 value。而 entrySet 只是遍历了一次就把 key 和 value 都放到了 entry 中，效<br>率更高。如果是 JDK8，使用 Map.foreach 方法。<br>正例：values()返回的是 V 值集合，是一个 list 集合对象；keySet()返回的是 K 值集合，是<br>一个 Set 集合对象；entrySet()返回的是 K-V 值组合集合。</p>
-<pre><code>![](https://upload-images.jianshu.io/upload_images/12625950-bae3ca1820eb6a3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</code></pre><pre><code>【强制】泛型通配符&lt;? extends T&gt;来接收返回的数据，此写法的泛型集合不能使用 add 方
+法，而&lt;? super T&gt;不能使用 get 方法，作为接口调用赋值时易出错。
 
-##### 并发处理
+说明：扩展说一下 PECS(Producer Extends Consumer Super)原则：第一、频繁往外读取内
+容的，适合用&lt;? extends T&gt;。第二、经常往里插入的，适合用&lt;? super T&gt;。
+</code></pre><pre><code>【强制】不要在 foreach 循环里进行元素的 remove/add 操作。remove 元素请使用 Iterator
+方式，如果并发操作，需要对 Iterator 对象加锁。
 
-需要先好好学习一下并发的知识。
+正例：
+List&lt;String&gt; list = new ArrayList&lt;&gt;(); 
+list.add(&quot;1&quot;); 
+list.add(&quot;2&quot;); 
+Iterator&lt;String&gt; iterator = list.iterator(); 
+while (iterator.hasNext()) { 
+String item = iterator.next(); 
+if (删除元素的条件) { 
+iterator.remove(); 
+} 
+}
+反例：
+for (String item : list) { 
+if (&quot;1&quot;.equals(item)) { 
+list.remove(item); 
+} 
+} 
+说明：以上代码的执行结果肯定会出乎大家的意料，那么试一下把“1”换成“2”，会是同样的结果吗？
+</code></pre><pre><code>【强制】在 JDK7 版本及以上，Comparator 实现类要满足如下三个条件，不然 Arrays.sort，
+Collections.sort 会报 IllegalArgumentException 异常。
 
-##### 控制语句
+说明：三个条件如下
+1） x，y 的比较结果和 y，x 的比较结果相反。
+2） x&gt;y，y&gt;z，则 x&gt;z。
+3） x=y，则 x，z 比较结果和 y，z 比较结果相同。
 
-</code></pre><p>【强制】在高并发场景中，避免使用”等于”判断作为中断或退出的条件。<br>说明：如果并发控制没有处理好，容易产生等值判断被“击穿”的情况，使用大于或小于的区间<br>判断条件来代替。<br>反例：判断剩余奖品数量等于 0 时，终止发放奖品，但因为并发处理错误导致奖品数量瞬间变<br>成了负数，这样的话，活动无法终止。</p>
-<pre><code>
-</code></pre><p>【推荐】表达异常的分支时，少用 if-else 方式，这种方式可以改写成：<br>if (condition) {<br> …<br> return obj;<br>}<br>// 接着写 else 的业务逻辑代码; if-else 请勿超过 3 层</p>
-<pre><code>
-</code></pre><p>【推荐】除常用方法（如 getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将<br>复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。<br>说明：很多 if 语句内的逻辑相当复杂，阅读者需要分析条件表达式的最终结果，才能明确什么<br>样的条件执行什么样的语句，那么，如果阅读者分析逻辑表达式错误呢？<br>正例：<br>// 伪代码如下<br>final boolean existed = (file.open(fileName, “w”) != null) &amp;&amp; (…) || (…);<br>if (existed) {<br> …<br>}<br>反例：<br>if ((file.open(fileName, “w”) != null) &amp;&amp; (…) || (…)) {<br> …<br>}</p>
-<pre><code>
-</code></pre><p>【参考】下列情形，需要进行参数校验：<br>1） 调用频次低的方法。<br>2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参<br>数错误导致中间执行回退，或者错误，那得不偿失。<br>3） 需要极高稳定性和可用性的方法。<br>4） 对外提供的开放接口，不管是 RPC/API/HTTP 接口。<br>5） 敏感权限入口。</p>
-<pre><code>
-</code></pre><p>【参考】下列情形，不需要进行参数校验：<br>1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。<br>2） 底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底<br>层才会暴露问题。一般 DAO 层与 Service 层都在同一个应用中，部署在同一台服务器中，所<br>以 DAO 的参数校验，可以省略。<br>3） 被声明成 private 只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参<br>数已经做过检查或者肯定不会有问题，此时可以不校验参数</p>
-<pre><code>
-##### 注释规约
-
-</code></pre><p>【强制】类、类属性、类方法的注释必须使用 Javadoc 规范，使用/*<em>内容</em>/格式，不得使用<br>// xxx 方式。</p>
-<pre><code>
-</code></pre><p>【强制】所有的抽象方法（包括接口中的方法）必须要用 Javadoc 注释、除了返回值、参数、<br>异常说明外，还必须指出该方法做什么事情，实现什么功能。<br>说明：对子类的实现要求，或者调用注意事项，请一并说明</p>
-<pre><code>
-</code></pre><p>【强制】所有的类都必须添加创建者和创建日期</p>
-<pre><code>
-</code></pre><p>【强制】所有的枚举类型字段必须要有注释，说明每个数据项的用途。</p>
-<pre><code>
-</code></pre><p>【参考】特殊注释标记，请注明标记人与标记时间。注意及时处理这些标记，通过标记扫描，<br>经常清理此类标记。线上故障有时候就是来源于这些标记处的代码。<br>1） 待办事宜（TODO）:（ 标记人，标记时间，[预计处理时间]）<br>表示需要实现，但目前还未实现的功能。这实际上是一个 Javadoc 的标签，目前的 Javadoc<br>还没有实现，但已经被广泛使用。只能应用于类，接口和方法（因为它是一个 Javadoc 标签）。<br>2） 错误，不能工作（FIXME）:（标记人，标记时间，[预计处理时间]）<br>在注释中用 FIXME 标记某代码是错误的，而且不能工作，需要及时纠正的情况。</p>
-<pre><code>
-##### 其他
-
-</code></pre><p>【强制】在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。<br>说明：不要在方法体内定义：Pattern pattern = Pattern.compile(“规则”);</p>
-<pre><code>
-</code></pre><p>【强制】获取当前毫秒数 System.currentTimeMillis(); 而不是 new Date().getTime();<br>说明：如果想获取更加精确的纳秒级时间值，使用 System.nanoTime()的方式。在 JDK8 中，<br>针对统计时间等场景，推荐使用 Instant 类。</p>
-<pre><code>
-</code></pre><p>【推荐】任何数据结构的构造或初始化，都应指定大小，避免数据结构无限增长吃光内存。</p>
-<pre><code>
-## 2. 异常日志
-
-##### 异常处理
-</code></pre><p>【推荐】防止 NPE，是程序员的基本修养，注意 NPE 产生的场景：<br>1）返回类型为基本数据类型，return 包装数据类型的对象时，自动拆箱有可能产生 NPE。<br> 反例：public int f() { return Integer 对象}， 如果为 null，自动解箱抛 NPE。<br>2） 数据库的查询结果可能为 null。<br>3） 集合里的元素即使 isNotEmpty，取出的数据元素也可能为 null。<br>4） 远程调用返回对象时，一律要求进行空指针判断，防止 NPE。<br>5） 对于 Session 中获取的数据，建议 NPE 检查，避免空指针。<br>6） 级联调用 obj.getA().getB().getC()；一连串调用，易产生 NPE。<br>正例：使用 JDK8 的 Optional 类来防止 NPE 问题。</p>
-<pre><code>
-</code></pre><p>【参考】对于公司外的 http/api 开放接口必须使用“错误码”；而应用内部推荐异常抛出；<br>跨应用间 RPC 调用优先考虑使用 Result 方式，封装 isSuccess()方法、“错误码”、“错误简<br>短信息”。<br>说明：关于 RPC 方法返回方式使用 Result 方式的理由：<br>1）使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。<br>2）如果不加栈信息，只是 new 自定义异常，加入自己的理解的 error message，对于调用<br>端解决问题的帮助不会太多。如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输<br>的性能损耗也是问题</p>
-<pre><code>
-</code></pre><p>【参考】避免出现重复的代码（Don’t Repeat Yourself），即 DRY 原则。<br>说明：随意复制和粘贴代码，必然会导致代码的重复，在以后需要修改时，需要修改所有的副<br>本，容易遗漏。必要时抽取共性方法，或者抽象公共类，甚至是组件化。<br>正例：一个类中有多个 public 方法，都需要进行数行相同的参数校验操作，这个时候请抽取：<br>private boolean checkParam(DTO dto) {…} </p>
-<pre><code>
-##### 日志规约
-
-这一节内容都不太熟悉，看书。
-
-</code></pre><p>【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架<br>SLF4J 中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。<br>import org.slf4j.Logger;<br>import org.slf4j.LoggerFactory;<br>private static final Logger logger = LoggerFactory.getLogger(Abc.class); </p>
-<pre><code>
-</code></pre><p>【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过<br>关键字 throws 往上抛出。<br>正例：logger.error(各类参数或者对象 toString() + “_” + e.getMessage(), e);<br><code>`</code></p>
-<h2 id="单元测试和安全规约、数据库等看文档。"><a href="#单元测试和安全规约、数据库等看文档。" class="headerlink" title="单元测试和安全规约、数据库等看文档。"></a>单元测试和安全规约、数据库等看文档。</h2>
+反例：下例中没有处理相等的情况，实际使用中可能会出现异常：
+new Comparator&lt;Student&gt;() { 
+@Override 
+public int compare(Student o1, Student o2) { 
+return o1.getId() &gt; o2.getId() ? 1 : -1; 
+} 
+};
+</code></pre><pre><code>【推荐】集合泛型定义时，在 JDK7 及以上，使用 diamond 语法或全省略。
+说明：菱形泛型，即 diamond，直接使用&lt;&gt;来指代前边已经指定的类型。
+正例：
+// &lt;&gt; diamond 方式
+HashMap&lt;String, String&gt; userCache = new HashMap&lt;&gt;(16);
+// 全省略方式
+ArrayList&lt;User&gt; users = new ArrayList(10); 
+</code></pre><pre><code>【推荐】集合初始化时，指定集合初始值大小。
+说明：HashMap 使用 HashMap(int initialCapacity) 初始化。
+正例：initialCapacity = (需要存储的元素个数 / 负载因子) + 1。注意负载因子（即 loader 
+factor）默认为 0.75，如果暂时无法确定初始值大小，请设置为 16（即默认值）。
+反例：HashMap 需要放置 1024 个元素，由于没有设置容量初始大小，随着元素不断增加，容
+量 7 次被迫扩大，resize 需要重建 hash 表，严重影响性能
+</code></pre><pre><code>【推荐】使用 entrySet 遍历 Map 类集合 KV，而不是 keySet 方式进行遍历。
+说明：keySet 其实是遍历了 2 次，一次是转为 Iterator 对象，另一次是从 hashMap 中取出
+key 所对应的 value。而 entrySet 只是遍历了一次就把 key 和 value 都放到了 entry 中，效
+率更高。如果是 JDK8，使用 Map.foreach 方法。
+正例：values()返回的是 V 值集合，是一个 list 集合对象；keySet()返回的是 K 值集合，是
+一个 Set 集合对象；entrySet()返回的是 K-V 值组合集合。
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/12625950-bae3ca1820eb6a3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h5 id="并发处理"><a href="#并发处理" class="headerlink" title="并发处理"></a>并发处理</h5><p>需要先好好学习一下并发的知识。</p>
+<h5 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h5><pre><code>【强制】在高并发场景中，避免使用”等于”判断作为中断或退出的条件。
+说明：如果并发控制没有处理好，容易产生等值判断被“击穿”的情况，使用大于或小于的区间
+判断条件来代替。
+反例：判断剩余奖品数量等于 0 时，终止发放奖品，但因为并发处理错误导致奖品数量瞬间变
+成了负数，这样的话，活动无法终止。
+</code></pre><pre><code>【推荐】表达异常的分支时，少用 if-else 方式，这种方式可以改写成：
+if (condition) { 
+ ... 
+ return obj; 
+} 
+// 接着写 else 的业务逻辑代码; if-else 请勿超过 3 层
+</code></pre><pre><code>【推荐】除常用方法（如 getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将
+复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。
+说明：很多 if 语句内的逻辑相当复杂，阅读者需要分析条件表达式的最终结果，才能明确什么
+样的条件执行什么样的语句，那么，如果阅读者分析逻辑表达式错误呢？
+正例：
+// 伪代码如下
+final boolean existed = (file.open(fileName, &quot;w&quot;) != null) &amp;&amp; (...) || (...);
+if (existed) {
+ ...
+} 
+反例：
+if ((file.open(fileName, &quot;w&quot;) != null) &amp;&amp; (...) || (...)) {
+ ...
+}
+</code></pre><pre><code>【参考】下列情形，需要进行参数校验：
+1） 调用频次低的方法。
+2） 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计，但如果因为参
+数错误导致中间执行回退，或者错误，那得不偿失。
+3） 需要极高稳定性和可用性的方法。
+4） 对外提供的开放接口，不管是 RPC/API/HTTP 接口。
+5） 敏感权限入口。
+</code></pre><pre><code>【参考】下列情形，不需要进行参数校验：
+1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。
+2） 底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底
+层才会暴露问题。一般 DAO 层与 Service 层都在同一个应用中，部署在同一台服务器中，所
+以 DAO 的参数校验，可以省略。
+3） 被声明成 private 只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参
+数已经做过检查或者肯定不会有问题，此时可以不校验参数
+</code></pre><h5 id="注释规约"><a href="#注释规约" class="headerlink" title="注释规约"></a>注释规约</h5><pre><code>【强制】类、类属性、类方法的注释必须使用 Javadoc 规范，使用/**内容*/格式，不得使用
+// xxx 方式。
+</code></pre><pre><code>【强制】所有的抽象方法（包括接口中的方法）必须要用 Javadoc 注释、除了返回值、参数、
+异常说明外，还必须指出该方法做什么事情，实现什么功能。
+说明：对子类的实现要求，或者调用注意事项，请一并说明
+</code></pre><pre><code>【强制】所有的类都必须添加创建者和创建日期
+</code></pre><pre><code>【强制】所有的枚举类型字段必须要有注释，说明每个数据项的用途。
+</code></pre><pre><code>【参考】特殊注释标记，请注明标记人与标记时间。注意及时处理这些标记，通过标记扫描，
+经常清理此类标记。线上故障有时候就是来源于这些标记处的代码。
+1） 待办事宜（TODO）:（ 标记人，标记时间，[预计处理时间]）
+表示需要实现，但目前还未实现的功能。这实际上是一个 Javadoc 的标签，目前的 Javadoc
+还没有实现，但已经被广泛使用。只能应用于类，接口和方法（因为它是一个 Javadoc 标签）。
+2） 错误，不能工作（FIXME）:（标记人，标记时间，[预计处理时间]）
+在注释中用 FIXME 标记某代码是错误的，而且不能工作，需要及时纠正的情况。
+</code></pre><h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><pre><code>【强制】在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。
+说明：不要在方法体内定义：Pattern pattern = Pattern.compile(“规则”);
+</code></pre><pre><code>【强制】获取当前毫秒数 System.currentTimeMillis(); 而不是 new Date().getTime();
+说明：如果想获取更加精确的纳秒级时间值，使用 System.nanoTime()的方式。在 JDK8 中，
+针对统计时间等场景，推荐使用 Instant 类。
+</code></pre><pre><code>【推荐】任何数据结构的构造或初始化，都应指定大小，避免数据结构无限增长吃光内存。
+</code></pre><h2 id="2-异常日志"><a href="#2-异常日志" class="headerlink" title="2. 异常日志"></a>2. 异常日志</h2><h5 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h5><pre><code>【推荐】防止 NPE，是程序员的基本修养，注意 NPE 产生的场景：
+1）返回类型为基本数据类型，return 包装数据类型的对象时，自动拆箱有可能产生 NPE。
+ 反例：public int f() { return Integer 对象}， 如果为 null，自动解箱抛 NPE。
+2） 数据库的查询结果可能为 null。
+3） 集合里的元素即使 isNotEmpty，取出的数据元素也可能为 null。
+4） 远程调用返回对象时，一律要求进行空指针判断，防止 NPE。
+5） 对于 Session 中获取的数据，建议 NPE 检查，避免空指针。
+6） 级联调用 obj.getA().getB().getC()；一连串调用，易产生 NPE。
+正例：使用 JDK8 的 Optional 类来防止 NPE 问题。
+</code></pre><pre><code>【参考】对于公司外的 http/api 开放接口必须使用“错误码”；而应用内部推荐异常抛出；
+跨应用间 RPC 调用优先考虑使用 Result 方式，封装 isSuccess()方法、“错误码”、“错误简
+短信息”。
+说明：关于 RPC 方法返回方式使用 Result 方式的理由：
+1）使用抛异常返回方式，调用方如果没有捕获到就会产生运行时错误。
+2）如果不加栈信息，只是 new 自定义异常，加入自己的理解的 error message，对于调用
+端解决问题的帮助不会太多。如果加了栈信息，在频繁调用出错的情况下，数据序列化和传输
+的性能损耗也是问题
+</code></pre><pre><code>【参考】避免出现重复的代码（Don’t Repeat Yourself），即 DRY 原则。
+说明：随意复制和粘贴代码，必然会导致代码的重复，在以后需要修改时，需要修改所有的副
+本，容易遗漏。必要时抽取共性方法，或者抽象公共类，甚至是组件化。
+正例：一个类中有多个 public 方法，都需要进行数行相同的参数校验操作，这个时候请抽取：
+private boolean checkParam(DTO dto) {...} 
+</code></pre><h5 id="日志规约"><a href="#日志规约" class="headerlink" title="日志规约"></a>日志规约</h5><p>这一节内容都不太熟悉，看书。</p>
+<pre><code>【强制】应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架
+SLF4J 中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。
+import org.slf4j.Logger; 
+import org.slf4j.LoggerFactory;
+private static final Logger logger = LoggerFactory.getLogger(Abc.class); 
+</code></pre><pre><code>【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过
+关键字 throws 往上抛出。
+正例：logger.error(各类参数或者对象 toString() + &quot;_&quot; + e.getMessage(), e);
+</code></pre><h2 id="单元测试和安全规约、数据库等看文档。"><a href="#单元测试和安全规约、数据库等看文档。" class="headerlink" title="单元测试和安全规约、数据库等看文档。"></a>单元测试和安全规约、数据库等看文档。</h2>
             </div>
             <hr>
 
