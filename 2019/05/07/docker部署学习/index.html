@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>分类: it - lt&#39;s blog</title>
+    <title>docker 部署学习 - lt&#39;s blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="lt,"> 
-    <meta name="description" content="C++、JavaEE、Flutter、Hacker,"> 
+    <meta name="description" content="C++、JavaEE、Flutter、Hacker,数据库操作数据库导出mysqldump -u root -p abc &amp;gt; abc.sql
+数据库导入mysql -u abc -p abc &amp;lt; abc.sql
+数据库修改字符集# 进入 ,"> 
     <meta name="author" content="lt"> 
     <link rel="alternative" href="atom.xml" title="lt&#39;s blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -30,64 +32,89 @@
 <body class="loading">
     <span id="config-title" style="display:none">lt&#39;s blog</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/ThomasLeedev" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2019 lt.
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-111726.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.3" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://thomasleedev.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">docker 部署学习</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
         <div>
-            <a class="image-logo" href="/"></a>
-            <div class="icon-menu switchmenu"></div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
-    
-    <div id="post0">
-        <p>四月 21, 2019</p>
-        <h2><a href="/2019/04/21/2019年4月开发总结/" title="2019年4月开发总结" class="posttitle">2019年4月开发总结</a></h2>
-        <p class="summary"></p>
-    </div>
-    
+    <div class="scrollbar"></div>
 </div>
 
-    <div id="primary">
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">docker 部署学习</h1>
+        <div class="stuff">
+            <span>五月 07, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><h5 id="数据库导出"><a href="#数据库导出" class="headerlink" title="数据库导出"></a>数据库导出</h5><p><code>mysqldump -u root -p abc &gt; abc.sql</code></p>
+<h5 id="数据库导入"><a href="#数据库导入" class="headerlink" title="数据库导入"></a>数据库导入</h5><p><code>mysql -u abc -p abc &lt; abc.sql</code></p>
+<h5 id="数据库修改字符集"><a href="#数据库修改字符集" class="headerlink" title="数据库修改字符集"></a>数据库修改字符集</h5><pre><code># 进入 mysql 容器
+docker exec -it mysql-container bash
+
+apt-get update
+apt-get install vim
+
+vim /etc/mysql/mysql.conf.d/mysql.cnf
+
+##### 文件中添加如下信息 ----------
+[mysql]
+default-character-set = utf8
+
+[mysql.server]
+default-character-set = utf8
+
+[mysqld_safe]
+default-character-set = utf8
+
+[client]
+default-character-set = utf8
+
+[mysqld]
+character_set_server=utf8
+init_connect=’SET NAMES utf8’
+##### ----------------------------
+
+docker restart mysql-container
+</code></pre>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://other.web.rh01.sycdn.kuwo.cn/resource/n3/39/96/684634007.mp3"></li>
+                    
+                </ul>
+            
+        </div>
         
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
     </div>
     
 </div>
-<div id="preview"></div>
 
 
+    </div>
+</div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
