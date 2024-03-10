@@ -4,21 +4,102 @@
   
   
   <entry>
-    <title>用AI创作明星祝福视频</title>
-    <link href="/2024/02/06/%E7%94%A8AI%E5%88%9B%E4%BD%9C%E6%98%8E%E6%98%9F%E7%A5%9D%E7%A6%8F%E8%A7%86%E9%A2%91/"/>
-    <url>/2024/02/06/%E7%94%A8AI%E5%88%9B%E4%BD%9C%E6%98%8E%E6%98%9F%E7%A5%9D%E7%A6%8F%E8%A7%86%E9%A2%91/</url>
+    <title>软考高项笔记</title>
+    <link href="/2024/03/04/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/240304%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/"/>
+    <url>/2024/03/04/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/240304%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>后天就是爸爸还有望强的生日了，想着有什么是我可以送给他们的独特礼物呢？想到既然现在是AI浪潮，我自己也正好在研究AI，为什么不结合着最新的技术，送他们一个礼物，也算学以致用了，不如就制作一个明星生日祝福吧。</p></blockquote><h2 id="内容策划"><a href="#内容策划" class="headerlink" title="内容策划"></a>内容策划</h2><p>爸爸是70后，通过ChatGPT，了解到70后耳熟能详的明星有周星驰、刘德华、成龙、张学友等，这些明星在如今也同样很火，在给望强制作视频时，可以直接沿用。另外，我自己也准备再加入宝总、奥巴马、何炅，差不多每人十几秒钟的视频，剪辑成一分多钟即可。</p><p><strong>祝福内容</strong></p><ul><li>周星驰（李小龙黄色服饰）：“哈哈，曾够堂啊，生日快乐！希望你的生活就像我的电影一样，充满欢笑和惊喜。”</li><li>刘德华（西装革履）：“曾够堂，生日快乐！愿你的人生如我的歌声一样，旋律悠扬，感情丰富。在新的一年里，愿你的每一天都充满爱和幸福。”</li><li>张学友：“曾够堂，祝你生日快乐。愿你的生活就像我的歌曲一样，充满感动和温暖。在这个特别的日子里，愿你被爱包围，幸福满溢。”</li><li>成龙：“曾够堂，生日快乐！在这个特别的日子，我希望你的生活充满快乐。愿你新的一年永远充满笑容和阳光！”</li><li>胡歌：“曾够堂，生日快乐！愿你的新的一年里，生活就像一部精彩的剧本，每一天都充满了欢笑、爱和惊喜。在你的人生旅程中，愿你总能发现新的快乐和美好。”</li><li>奥巴马：”Hello Zeng Goutang, happy birthday! In this joyous moment, I hope your new year will be like celebrating a victory, filled with joy and achievements. May every day of yours be as dazzling as a festival, full of endless possibilities and hope.”</li><li>何炅：“嘿，曾够堂，生日快乐啊！在这个特别的日子里，我真心希望你的生活就像我节目里的每一期一样，充满欢乐和惊喜。愿你新的一年里，每一天都能遇到美好的事情。记得要常常微笑，因为你的笑容可以照亮你周围的每一个人！祝你生日快乐，天天开心，越来越棒！”</li></ul><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p><strong>语音生成</strong></p><p>语音生成使用 <a href="https://github.com/RVC-Boss/GPT-SoVITS">GPT-SoVITS</a>。</p><p><strong>视频生成</strong></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="成本管理"><a href="#成本管理" class="headerlink" title="成本管理"></a>成本管理</h2><h2 id="配置与变更管理"><a href="#配置与变更管理" class="headerlink" title="配置与变更管理"></a>配置与变更管理</h2><p><img src="/images/Pasted%20image%2020240310093954.png"></p><p><img src="/images/Pasted%20image%2020240310095828.png"></p><p><img src="/images/Pasted%20image%2020240310095921.png"></p><p><img src="/../../images/Pasted%20image%2020240310100526.png"></p><p><img src="/../../images/Pasted%20image%2020240310101415.png"></p><p><img src="/../../images/Pasted%20image%2020240310101720.png"></p><p><img src="/../../images/Pasted%20image%2020240310101947.png"></p><p><img src="/../../images/Pasted%20image%2020240310102236.png"></p><p><img src="/../../images/Pasted%20image%2020240310102846.png"></p><p><img src="/../../images/Pasted%20image%2020240310103459.png"></p><p><img src="/../../images/Pasted%20image%2020240310103939.png"></p><p><img src="/../../images/Pasted%20image%2020240310104004.png"></p><p><img src="/../../images/Pasted%20image%2020240310104426.png"></p><p><img src="/../../images/Pasted%20image%2020240310104541.png"></p><p><img src="/../../images/Pasted%20image%2020240310104903.png"></p><p><img src="/../../images/Pasted%20image%2020240310104925.png"></p><h2 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h2><h3 id="小计算题"><a href="#小计算题" class="headerlink" title="小计算题"></a>小计算题</h3><p>![[Pasted image 20240304210647.png]]</p><p>![[Pasted image 20240304211343.png]]</p><p>![[Pasted image 20240304212821.png]]</p><p>![[Pasted image 20240304214008.png]]</p><p>![[Pasted image 20240304214808.png]]</p><h3 id="进度计算题"><a href="#进度计算题" class="headerlink" title="进度计算题"></a>进度计算题</h3><p>![[Pasted image 20240305211003.png]]</p><p>![[Pasted image 20240305211019.png]]</p><p>![[Pasted image 20240305213259.png]]</p><p>![[Pasted image 20240305213317.png]]</p><p>![[Pasted image 20240305213335.png]]</p><p>![[Pasted image 20240305213442.png]]</p><p>![[Pasted image 20240305214611.png]]</p><p>![[Pasted image 20240305214847.png]]</p><p>![[Pasted image 20240305215302.png]]</p><p>![[Pasted image 20240305215815.png]]</p><p>![[Pasted image 20240305221642.png]]</p><p>![[Pasted image 20240305222028.png]]</p><p>![[Pasted image 20240305222615.png]]</p><h3 id="成本计算题"><a href="#成本计算题" class="headerlink" title="成本计算题"></a>成本计算题</h3><p>![[Pasted image 20240305223408.png]]</p><p>![[Pasted image 20240305223705.png]]</p><blockquote><p>[!NOTE] AI解释名词</p></blockquote><p>EV 是“Earned Value”的缩写，中文叫“挣值”😀 它在项目管理中可是个非常重要的概念呢！ 想象一下，你有一个大作业要完成，比如做一个蛋糕🎂 这个蛋糕就是你的项目。做蛋糕需要很多材料，比如面粉、糖、鸡蛋等等，这些材料的花费就是你的成本。同时，你还需要花时间来做这个蛋糕，这个时间就是你的工期。 现在，EV 就像是你已经完成的蛋糕部分。它是根据你已经完成的工作来衡量的，也就是说，你实际完成的蛋糕部分有多少，EV 就是多少。 比如说，你已经把蛋糕的底层做好了，那么这个底层就是你的 EV。EV 可以帮助你了解项目的进展情况，看看你已经完成了多少工作，还有多少工作需要做。这样，你就可以更好地控制项目的进度和成本，确保蛋糕按时完成😄 </p><blockquote><p>继续用以上例子，解释一下什么是AC、PV、BAC、EAC、ETC、CV、SV、CPI、SPI、TCPI、VAC</p><p>好的，那我们继续用做蛋糕的例子来解释这些概念😀<br><strong>AC（Actual Cost）</strong>：实际成本，就像是你为了做这个蛋糕实际花费的钱，比如买面粉、糖、鸡蛋等材料的费用。<br><strong>PV（ Planned Value）</strong>：计划价值，是你原计划要花费的成本，也就是你做蛋糕之前预估的费用。<br><strong>BAC（Budget At Completion）</strong>：完工预算，就是你做这个蛋糕总共的预算，包括所有的材料和时间成本。<br><strong>EAC（Estimate At Completion）</strong>：完工估算，是根据项目的实际进展情况，预测完成整个蛋糕还需要花费的成本。<br><strong>ETC（Estimate To Complete）</strong>：剩余工作成本估算，就是还需要买多少材料才能完成蛋糕。<br><strong>CV（Cost Variance）</strong>：成本偏差，是实际成本和计划成本之间的差异。如果你花的钱比计划少，CV 就是正数；如果花的钱多，CV 就是负数。<br><strong>SV（Schedule Variance）</strong>：进度偏差，是实际进度和计划进度之间的差别。如果你做蛋糕的速度比计划快，SV 就是正数；如果慢了，SV 就是负数。<br><strong>CPI（Cost Performance Index）</strong>：成本绩效指数，是用来衡量你的成本效率的。它等于挣值除以实际成本，如果 CPI 大于 1，说明你的成本控制得不错；如果小于 1，可能就需要注意一下了。<br><strong>SPI（Schedule Performance Index）</strong>：进度绩效指数，类似于 CPI，它是挣值除以计划价值，用来评估你的进度情况。SPI 大于 1 表示进度超前，小于 1 则表示进度落后。<br><strong>TCPI（To-Complete Performance Index）</strong>：完工绩效指数，是根据剩余工作量和剩余预算来预测项目能否按时完成的一个指标。<br><strong>VAC（Variance At Completion）</strong>：完工偏差，是整个项目的成本和预算之间的差异。 这些概念在项目管理中都非常重要，可以帮助你更好地了解项目的成本、进度和绩效情况，就像做蛋糕一样，需要时刻关注材料的使用和时间的控制，才能做出一个完美的蛋糕🎂 这样解释有没有让你更明白呢？如果还有其他问题，随时都可以问我哦~</p></blockquote><p>![[Pasted image 20240306201336.png]]</p><p>![[Pasted image 20240306201402.png]]</p>]]></content>
     
     
     <categories>
       
-      <category>生活黑客</category>
+      <category>项目经理</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>项目经理</tag>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>交互设计原则</title>
+    <link href="/2024/03/03/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/240303%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    <url>/2024/03/03/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/240303%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>以下是交互设计原则清单，在进行页面的设计时，一个个核对参考。</p></blockquote><h2 id="用户场景还原"><a href="#用户场景还原" class="headerlink" title="用户场景还原"></a>用户场景还原</h2><blockquote><p>产品经理的核心能力之一：换位思考。你要能够变成一个小白用户，你现在不熟悉系统，不了解接下来该如果操作，你只是在此刻当下，需要去完成某一个待办任务，在这样的视角下，去审视产品，去优化产品。</p></blockquote><p>参考：<br><a href="https://m.okjike.com/originalPosts/65d6ac926d9f1906312b17c3?s=eyJ1IjoiNWJmMDQ0YzhmOTQ5OTAwMDExNWViMDhmIn0=">不要忘记，换位思考是一种超能力 –Paul Graham</a></p><h3 id="用户是谁？"><a href="#用户是谁？" class="headerlink" title="用户是谁？"></a>用户是谁？</h3><h3 id="用户在怎样的场景下使用产品？"><a href="#用户在怎样的场景下使用产品？" class="headerlink" title="用户在怎样的场景下使用产品？"></a>用户在怎样的场景下使用产品？</h3><h3 id="用户需要完成什么待办任务？"><a href="#用户需要完成什么待办任务？" class="headerlink" title="用户需要完成什么待办任务？"></a>用户需要完成什么待办任务？</h3><h3 id="对用户来说，你需要提供的核心价值是什么？"><a href="#对用户来说，你需要提供的核心价值是什么？" class="headerlink" title="对用户来说，你需要提供的核心价值是什么？"></a>对用户来说，你需要提供的核心价值是什么？</h3><h3 id="你是否满足了这些场景下用户需要完成的待办任务？"><a href="#你是否满足了这些场景下用户需要完成的待办任务？" class="headerlink" title="你是否满足了这些场景下用户需要完成的待办任务？"></a>你是否满足了这些场景下用户需要完成的待办任务？</h3><h3 id="用户能感受到你提供的核心价值吗？"><a href="#用户能感受到你提供的核心价值吗？" class="headerlink" title="用户能感受到你提供的核心价值吗？"></a>用户能感受到你提供的核心价值吗？</h3><h2 id="信息交付清晰"><a href="#信息交付清晰" class="headerlink" title="信息交付清晰"></a>信息交付清晰</h2><blockquote><p>管理复杂：复杂性有时候是难以避免的，重要的是不能让用户感到困惑。不要让用户思考。</p></blockquote><h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ul><li>金字塔原理，需要结构化地展示信息，否则会显得杂乱无章。</li></ul><h4 id="视觉层次分明"><a href="#视觉层次分明" class="headerlink" title="视觉层次分明"></a>视觉层次分明</h4><ul><li>不同展示区域之间，通过文字、间隔、背景、颜色等，层次分明。</li></ul><h4 id="重点突出"><a href="#重点突出" class="headerlink" title="重点突出"></a>重点突出</h4><ul><li>明确标志哪里可以点击。</li><li>主次分明。</li></ul><h4 id="保持简洁"><a href="#保持简洁" class="headerlink" title="保持简洁"></a>保持简洁</h4><ul><li>当简洁和一致性之间产生冲突，我们应该选择简洁。</li><li>如无必要，勿增实体。</li><li>能删的文字尽量都删掉，能够压缩的文字尽量压缩。</li><li>操作排序：点击、选择、输入。</li></ul><h4 id="隐藏高级特性"><a href="#隐藏高级特性" class="headerlink" title="隐藏高级特性"></a>隐藏高级特性</h4><h4 id="使用视觉语言"><a href="#使用视觉语言" class="headerlink" title="使用视觉语言"></a>使用视觉语言</h4><h4 id="讲人话"><a href="#讲人话" class="headerlink" title="讲人话"></a>讲人话</h4><ul><li>讲用户使用的语言。</li></ul><h4 id="适当的时候给予提示"><a href="#适当的时候给予提示" class="headerlink" title="适当的时候给予提示"></a>适当的时候给予提示</h4><ul><li>在适当的是时候展示。</li><li>一定要让用户能够注意到。</li></ul><h2 id="使用流程顺畅"><a href="#使用流程顺畅" class="headerlink" title="使用流程顺畅"></a>使用流程顺畅</h2><h4 id="流程顺畅"><a href="#流程顺畅" class="headerlink" title="流程顺畅"></a>流程顺畅</h4><h4 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h4><h4 id="及时反馈"><a href="#及时反馈" class="headerlink" title="及时反馈"></a>及时反馈</h4><h2 id="界面模块统一"><a href="#界面模块统一" class="headerlink" title="界面模块统一"></a>界面模块统一</h2><h2 id="体验细节丰富"><a href="#体验细节丰富" class="headerlink" title="体验细节丰富"></a>体验细节丰富</h2><h2 id="穷尽极端方案"><a href="#穷尽极端方案" class="headerlink" title="穷尽极端方案"></a>穷尽极端方案</h2><h4 id="异常操作"><a href="#异常操作" class="headerlink" title="异常操作"></a>异常操作</h4><h4 id="不操作"><a href="#不操作" class="headerlink" title="不操作"></a>不操作</h4><h4 id="操作慢"><a href="#操作慢" class="headerlink" title="操作慢"></a>操作慢</h4><h4 id="操作错误"><a href="#操作错误" class="headerlink" title="操作错误"></a>操作错误</h4><h2 id="符合自然习惯"><a href="#符合自然习惯" class="headerlink" title="符合自然习惯"></a>符合自然习惯</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>产品经理</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>产品经理</tag>
+      
+      <tag>交互设计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我心中理想的产品经理是怎样的？</title>
+    <link href="/2024/02/21/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/240221%E6%88%91%E5%BF%83%E4%B8%AD%E7%90%86%E6%83%B3%E7%9A%84%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F/"/>
+    <url>/2024/02/21/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/240221%E6%88%91%E5%BF%83%E4%B8%AD%E7%90%86%E6%83%B3%E7%9A%84%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>产品经理</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>产品经理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>用AI创作明星祝福视频</title>
+    <link href="/2024/02/06/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/240206%E7%94%A8AI%E5%88%9B%E4%BD%9C%E6%98%8E%E6%98%9F%E7%A5%9D%E7%A6%8F%E8%A7%86%E9%A2%91/"/>
+    <url>/2024/02/06/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/240206%E7%94%A8AI%E5%88%9B%E4%BD%9C%E6%98%8E%E6%98%9F%E7%A5%9D%E7%A6%8F%E8%A7%86%E9%A2%91/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>后天就是爸爸还有望强的生日了，想着有什么是我可以送给他们的独特礼物呢？想到既然现在是AI浪潮，我自己也正好在研究AI，为什么不结合着最新的技术，送他们一个礼物，也算学以致用了，不如就制作一个明星生日祝福吧。</p></blockquote><h2 id="内容策划"><a href="#内容策划" class="headerlink" title="内容策划"></a>内容策划</h2><p>爸爸是70后，通过ChatGPT，了解到70后耳熟能详的明星有周星驰、刘德华、成龙、张学友等，这些明星在如今也同样很火，在给望强制作视频时，可以直接沿用。另外，我自己也准备再加入宝总、奥巴马、何炅，差不多每人十几秒钟的视频，剪辑成一分多钟即可。</p><p><strong>祝福内容</strong></p><ul><li>周星驰（李小龙黄色服饰）：“哈哈，曾够堂啊，生日快乐！希望你的生活就像我的电影一样，充满欢笑和惊喜。”</li><li>刘德华（西装革履）：“曾够堂，生日快乐！愿你的人生如我的歌声一样，旋律悠扬，感情丰富。在新的一年里，愿你的每一天都充满爱和幸福。”</li><li>张学友：“曾够堂，祝你生日快乐。愿你的生活就像我的歌曲一样，充满感动和温暖。在这个特别的日子里，愿你被爱包围，幸福满溢。”</li><li>成龙：“曾够堂，生日快乐！在这个特别的日子，我希望你的生活充满快乐。愿你新的一年永远充满笑容和阳光！”</li><li>胡歌：“曾够堂，生日快乐！愿你的新的一年里，生活就像一部精彩的剧本，每一天都充满了欢笑、爱和惊喜。在你的人生旅程中，愿你总能发现新的快乐和美好。”</li><li>奥巴马：”Hello Zeng Goutang, happy birthday! In this joyous moment, I hope your new year will be like celebrating a victory, filled with joy and achievements. May every day of yours be as dazzling as a festival, full of endless possibilities and hope.”</li><li>何炅：“嘿，曾够堂，生日快乐啊！在这个特别的日子里，我真心希望你的生活就像我节目里的每一期一样，充满欢乐和惊喜。愿你新的一年里，每一天都能遇到美好的事情。记得要常常微笑，因为你的笑容可以照亮你周围的每一个人！祝你生日快乐，天天开心，越来越棒！”</li></ul><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p><strong>语音生成</strong></p><p>语音生成使用 <a href="https://github.com/RVC-Boss/GPT-SoVITS">GPT-SoVITS</a>。</p><p><strong>视频生成</strong></p><p>视频生成使用 Wav2Lip。若要付费，可用HeyGen。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>AI</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活黑客</tag>
       
       <tag>AI</tag>
       
@@ -30,10 +111,10 @@
   
   <entry>
     <title>我的生活系统</title>
-    <link href="/2024/01/22/%E6%88%91%E7%9A%84%E7%94%9F%E6%B4%BB%E7%B3%BB%E7%BB%9F/"/>
-    <url>/2024/01/22/%E6%88%91%E7%9A%84%E7%94%9F%E6%B4%BB%E7%B3%BB%E7%BB%9F/</url>
+    <link href="/2024/01/22/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/240122%E6%88%91%E7%9A%84%E7%94%9F%E6%B4%BB%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2024/01/22/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/240122%E6%88%91%E7%9A%84%E7%94%9F%E6%B4%BB%E7%B3%BB%E7%BB%9F/</url>
     
-    <content type="html"><![CDATA[<h2 id="生活习惯"><a href="#生活习惯" class="headerlink" title="生活习惯"></a>生活习惯</h2><h3 id="日常习惯"><a href="#日常习惯" class="headerlink" title="日常习惯"></a>日常习惯</h3><ul><li><p>易忘之事，随笔记载<br>生活和工作中有很多重要的事情，如果不记下来，就很容易忘记，像女朋友让自己过两天带一件东西给她，没记下来，过两天后啥都记不起来了，像工作上，领导安排做一件事情，但当时太忙，只是答应了下来，后续忙着忙着也很容易忘记，包括客户提的需求也是如此，当时提的需求，如果没记下来，后续再去回想，其实根据我的经验来说，是很难回忆起来的，大概率就是被遗忘，直到客户再次提起，但这样客户满意度、他人对你的信任度就会降低，因此，不管大事小事，如果要后续再做的，就一定要记下来，并且做一些批注。</p></li><li><p>易弃之物，随手收拾<br>长时间不用但又很重要的东西，要放在一个固定的地方，不要随手乱放，很容易弄丢。</p></li></ul><h3 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h3><ul><li><p>准备第二天穿的衣服<br>这样做的目的有两个，一是避免早上找穿的衣服太匆忙，导致浪费时间又把房间弄乱，二是减少早上起床对大脑的压力。</p></li><li><p>整理待办清单，做第二天的待办计划<br>通过使用滴答清单，将当天的待办进行清理和反思总结，并计划第二天的待办内容，这样做可以让生活更有序，也可以减少大脑的压力，让自己更专注，更有效率。</p></li></ul><h2 id="日常使用工具"><a href="#日常使用工具" class="headerlink" title="日常使用工具"></a>日常使用工具</h2><h3 id="Obsidian"><a href="#Obsidian" class="headerlink" title="Obsidian"></a>Obsidian</h3><h3 id="flomo"><a href="#flomo" class="headerlink" title="flomo"></a>flomo</h3><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><h3 id="墨问便签"><a href="#墨问便签" class="headerlink" title="墨问便签"></a>墨问便签</h3><h3 id="滴答清单"><a href="#滴答清单" class="headerlink" title="滴答清单"></a>滴答清单</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="生活习惯"><a href="#生活习惯" class="headerlink" title="生活习惯"></a>生活习惯</h2><h3 id="日常习惯"><a href="#日常习惯" class="headerlink" title="日常习惯"></a>日常习惯</h3><ul><li><p>易忘之事，随笔记载<br>生活和工作中有很多重要的事情，如果不记下来，就很容易忘记，像女朋友让自己过两天带一件东西给她，没记下来，过两天后啥都记不起来了，像工作上，领导安排做一件事情，但当时太忙，只是答应了下来，后续忙着忙着也很容易忘记，包括客户提的需求也是如此，当时提的需求，如果没记下来，后续再去回想，其实根据我的经验来说，是很难回忆起来的，大概率就是被遗忘，直到客户再次提起，但这样客户满意度、他人对你的信任度就会降低，因此，不管大事小事，如果要后续再做的，就一定要记下来，并且做一些批注。</p></li><li><p>易弃之物，随手收拾<br>长时间不用但又很重要的东西，要放在一个固定的地方，不要随手乱放，很容易弄丢。</p></li></ul><h3 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h3><ul><li><p>准备第二天穿的衣服<br>这样做的目的有两个，一是避免早上找穿的衣服太匆忙，导致浪费时间又把房间弄乱，二是减少早上起床对大脑的压力。</p></li><li><p>整理待办清单，做第二天的待办计划<br>通过使用滴答清单，将当天的待办进行清理和反思总结，并计划第二天的待办内容，这样做可以让生活更有序，也可以减少大脑的压力，让自己更专注，更有效率。</p></li></ul><h2 id="日常使用工具"><a href="#日常使用工具" class="headerlink" title="日常使用工具"></a>日常使用工具</h2><h3 id="Obsidian"><a href="#Obsidian" class="headerlink" title="Obsidian"></a>Obsidian</h3><blockquote><p>系统性的笔记工具，同时可以用来做日历管理，记录日常生活。</p></blockquote><h3 id="flomo"><a href="#flomo" class="headerlink" title="flomo"></a>flomo</h3><blockquote><p>碎片化思考收集工具。</p></blockquote><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><blockquote><p>博客系统。</p></blockquote><h3 id="滴答清单"><a href="#滴答清单" class="headerlink" title="滴答清单"></a>滴答清单</h3><blockquote><p>计划清单。</p></blockquote><h3 id="Xmind"><a href="#Xmind" class="headerlink" title="Xmind"></a>Xmind</h3><blockquote><p>本地思维导图工具，思路梳理。</p></blockquote><h3 id="幕布"><a href="#幕布" class="headerlink" title="幕布"></a>幕布</h3><blockquote><p>在线思维导图工具，模式树的搭建。</p></blockquote>]]></content>
     
     
     <categories>
@@ -43,18 +124,36 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>生活黑客</tag>
+      
+    </tags>
+    
   </entry>
   
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2024/01/22/hello-world/"/>
-    <url>/2024/01/22/hello-world/</url>
+    <title>回归秩序</title>
+    <link href="/2024/01/22/%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5/240308%E5%9B%9E%E5%BD%92%E7%A7%A9%E5%BA%8F/"/>
+    <url>/2024/01/22/%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5/240308%E5%9B%9E%E5%BD%92%E7%A7%A9%E5%BA%8F/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>焦虑、迷茫，怎么办？</p><p>《大学》中说：”知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。“</p><p>知止就是要知道自己的终极目标是什么，然后以终为始，聚焦目标，只有这样，自己的精力才能够集中，做起事来才有原则、抓手。</p>]]></content>
     
     
+    <categories>
+      
+      <category>随机漫步</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>生活哲学</tag>
+      
+    </tags>
     
   </entry>
   
